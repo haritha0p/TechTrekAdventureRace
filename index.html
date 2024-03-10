@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Guessing Game</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        margin: 50px auto;
+        text-align: center;
+    }
+    input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    #output {
+        margin-top: 20px;
+    }
+    p {
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Number Guessing Game</h2>
+    <label for="guess">Enter a number:</label><br>
+    <input type="text" id="guess" name="guess">
+    <button onclick="checkNumber()">Check</button>
+    <div id="output"></div>
+</div>
+
+<script>
+    function checkNumber() {
+        var userInput = document.getElementById('guess').value;
+        var correctNumber = 42; // Change this to your desired correct number
+        if (userInput == correctNumber) {
+            document.getElementById('output').innerHTML = '<p>"Hey! See those deer staring at me like they want to eat me. I can\'t go back because of the red fishes, and I can\'t swim either.Can you save me 😞"</p>';
+        } else {
+            document.getElementById('output').innerHTML = '<p>Sorry, that\'s not the correct number. Try again!</p>';
+        }
+    }
+</script>
+
+</body>
+</html>
